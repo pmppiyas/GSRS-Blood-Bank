@@ -6,7 +6,9 @@ function Navbar() {
     <>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/dashboard">Dashboard</NavLink>
-      <NavLink to="/events">Event</NavLink>
+      <NavLink className="text-red-500 font-medium " to="/events">
+        Event🔥
+      </NavLink>
       <NavLink to="/about">About</NavLink>
       <NavLink to="/contact">Contact</NavLink>
     </>
@@ -42,7 +44,9 @@ function Navbar() {
         <a className="btn btn-ghost text-xl ">GSRS</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="menu menu-horizontal px-1 flex gap-8 text-lg ">
+          {links}
+        </ul>
       </div>
       <div className="navbar-end">
         <a className="btn ">Become a Member</a>
