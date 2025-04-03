@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { AuthContext } from "../Provider/AuthProvider";
+import Loading from "./Loading";
 
 function HomeLayout() {
+  const { loading } = useContext(AuthContext);
+
   return (
     <>
       <Navbar></Navbar>

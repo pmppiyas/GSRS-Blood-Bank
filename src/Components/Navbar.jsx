@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 function Navbar() {
+  const auth = useContext(AuthContext);
+  console.log(auth);
   const links = (
     <>
-      <NavLink to="/">Home</NavLink>
+      <NavLink href="/">Home</NavLink>
       <NavLink to="/dashboard">Dashboard</NavLink>
       <NavLink className="text-red-500 font-medium " to="/events">
         Event🔥
@@ -14,7 +18,7 @@ function Navbar() {
     </>
   );
   return (
-    <div className="navbar transparent shadow-sm sticky w-full z-10 top-0 backdrop-blur-sm bg-opacity-50 shadow-lg ">
+    <div className="navbar transparent sticky w-full z-10 top-0 backdrop-blur-sm bg-opacity-50 shadow-lg ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,7 +53,9 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn ">Become a Member</a>
+        <NavLink to="/register" className="btn bg-primary text-white">
+          Become a Member
+        </NavLink>
       </div>
     </div>
   );

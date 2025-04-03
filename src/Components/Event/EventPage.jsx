@@ -3,15 +3,15 @@ import Heading from "../ui/Heading";
 import quiz1 from "../../assets/quiz1.png";
 function EventPage() {
   return (
-    <div>
+    <div className=" " id="event-page">
       <Heading
         title={"Our Event"}
         subtitle={"We are all working for humanity"}
       ></Heading>
       {/* Quiz Competition */}
-      <div className=" flex flex-col md:flex-row gap-8 justify-between p-4 my-6 mt-10 ">
+      <div className="  flex flex-col md:flex-row gap-8 justify-between p-4 my-6 mt-10 ">
         {/* Left */}
-        <div className="flex flex-col  gap-4 md:w-1/2 relative">
+        <div className="flex flex-col  gap-4 md:w-1/2 ">
           <h2 className=" text-5xl md:text-7xl  font-medium z-1">
             Quiz Competition
           </h2>
@@ -42,9 +42,6 @@ function EventPage() {
             <button className="btn btn-primary  px-10 text-lg" type="button">
               Register
             </button>{" "}
-          </div>
-          <div className="absolute top-0 md:-top-6 right-0  bg-red-500 text-white p-2 rounded-lg -rotate-45 z-0">
-            <h2 className="text-1xl">Upcoming</h2>
           </div>
         </div>
         {/* Right */}
