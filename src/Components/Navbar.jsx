@@ -1,15 +1,12 @@
-import React, { useContext } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { NavLink } from "react-router-dom";
-import { AuthContext } from "../Provider/AuthProvider";
 
 function Navbar() {
-  const auth = useContext(AuthContext);
-  console.log(auth);
   const links = (
     <>
       <NavLink href="/">Home</NavLink>
       <NavLink to="/dashboard">Dashboard</NavLink>
+      <NavLink to="/donar">Donar</NavLink>
       <NavLink className="text-red-500 font-medium " to="/events">
         Event🔥
       </NavLink>

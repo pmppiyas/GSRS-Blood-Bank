@@ -47,13 +47,14 @@ function AuthProvider({ children }) {
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider);
   };
-  
+
   const authInfo = {
     createUser,
     loginUser,
     logOut,
     loading,
     googleLogin,
+    user,
   };
 
   return (

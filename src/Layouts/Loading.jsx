@@ -1,9 +1,9 @@
 import React from "react";
-
+import loader from "../assets/spinner.svg";
 function Loading() {
   return (
-    <div>
-      <h2 className="text-3xl text-center">Loading </h2>
+    <div className="flex justify-center items-center h-screen">
+      <img className="w-40" src={loader} alt="Loading..." />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Dashboard from "../Components/Dashboard/Dashboard";
 import EventPage from "../Components/Event/EventPage";
 import Register from "../Components/Auth/Register";
 import Login from "../Components/Auth/Login";
+import DonarPage from "../Components/Donar/DonarPage";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
+      },
+      {
+        path: "donar",
+        element: <DonarPage></DonarPage>,
       },
       {
         path: "events",
