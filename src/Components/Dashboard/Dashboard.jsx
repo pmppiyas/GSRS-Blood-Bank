@@ -6,7 +6,20 @@ function Dashboard() {
   const { users } = useUsers();
   const { user } = useContext(AuthContext);
   const owner = users.find((u) => u.email === user?.email);
+  const { logOut } = useContext(AuthContext);
 
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        alert("Logged out successfully!");
+      })
+      .catch((error) => {
+        console.error("Logout error:", error);
+      });
+  };
+  const handleEditProfile = () => {
+    alert("Edit Profile feature coming soon!");
+  };
   return (
     <div className="max-w-5xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-center text-red-600 mb-6">
@@ -52,6 +65,17 @@ function Dashboard() {
                 {new Date(owner.createdAt).toLocaleDateString()}
               </li>
             </ul>
+            <div className="flex justify-between items-center mt-4">
+              <button className="btn btn-sm bg-blue-600 text-white mt-4 hover:bg-blue-700 transition">
+                Edit Profile
+              </button>
+              <button
+                onClick={() => handleLogout()}
+                className="btn btn-sm bg-red-600 text-white mt-4 hover:bg-red-700 transition"
+              >
+                Logout
+              </button>
+            </div>
           </div>
 
           {/* Donation History */}
@@ -120,7 +144,6 @@ function DonationForm() {
       location: formData.get("location"),
       bloodGroup: formData.get("bloodGroup"),
     };
-    console.log("New Donation:", newDonation);
     alert("Donation added successfully!");
     event.target.reset();
   };

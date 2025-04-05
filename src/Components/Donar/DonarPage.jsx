@@ -1,9 +1,10 @@
 import React from "react";
+import AllDonar from "./AllDonar";
 
 function DonarPage() {
   return (
     <div>
-      <h2>Donar Page</h2>
+      <AllDonar></AllDonar>
     </div>
   );
 }

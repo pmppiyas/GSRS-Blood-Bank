@@ -8,6 +8,9 @@ import EventPage from "../Components/Event/EventPage";
 import Register from "../Components/Auth/Register";
 import Login from "../Components/Auth/Login";
 import DonarPage from "../Components/Donar/DonarPage";
+import AboutPage from "../Components/About/AboutPage";
+import ContactPage from "../Components/Contact/ContactPage";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
   {
@@ -21,11 +24,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard></Dashboard>,
+        element: (
+          <PrivetRoute>
+            <Dashboard></Dashboard>
+          </PrivetRoute>
+        ),
       },
       {
         path: "donar",
         element: <DonarPage></DonarPage>,
+      },
+      {
+        path: "donar/:id",
+        element: (
+          <PrivetRoute>
+            <h2>hh</h2>
+          </PrivetRoute>
+        ),
       },
       {
         path: "events",
@@ -38,6 +53,14 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login></Login>,
+      },
+      {
+        path: "about",
+        element: <AboutPage></AboutPage>,
+      },
+      {
+        path: "contact",
+        element: <ContactPage></ContactPage>,
       },
     ],
   },

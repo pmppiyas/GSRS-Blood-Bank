@@ -1,8 +1,11 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://gsrsserver30-7meev48zm-pmppiyas-projects.vercel.app",
   withCredentials: true,
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 const useAxiosSecure = () => {
