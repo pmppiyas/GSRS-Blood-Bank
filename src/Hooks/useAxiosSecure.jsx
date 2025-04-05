@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://gsrsserver30-7meev48zm-pmppiyas-projects.vercel.app",
-  withCredentials: true,
+  baseURL: "https://gsrsserver30.vercel.app",
   headers: {
     "Content-Type": "application/json",
   },
