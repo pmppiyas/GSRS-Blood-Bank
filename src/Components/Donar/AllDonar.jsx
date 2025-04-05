@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 function AllDonar() {
   const { users } = useUsers();
-  console.log(users);
+
   const { user: owner } = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
   const [filteredUsers, setFilteredUsers] = useState([]);
