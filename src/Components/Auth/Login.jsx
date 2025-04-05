@@ -143,11 +143,11 @@ const Login = () => {
                 <Link to="/register">Register</Link>
               </span>
             </p>
-            <button className="bg-[#3B9DF8] text-white rounded-md py-1 pl-1 pr-4 flex items-center gap-[10px] text-[1rem] hover:bg-blue-500 transition-all duration-200 w-max">
-              <div
-                onClick={() => handleGoogleLogin()}
-                className="py-2 px-2.5 rounded-l-md bg-white"
-              >
+            <button
+              onClick={() => handleGoogleLogin()}
+              className="bg-[#3B9DF8] text-white rounded-md py-1 pl-1 pr-4 flex items-center gap-[10px] text-[1rem] hover:bg-blue-500 transition-all duration-200 w-max"
+            >
+              <div className="py-2 px-2.5 rounded-l-md bg-white">
                 <img
                   src="https://i.ibb.co/dQMmB8h/download-4-removebg-preview-1.png"
                   alt="google logo"
